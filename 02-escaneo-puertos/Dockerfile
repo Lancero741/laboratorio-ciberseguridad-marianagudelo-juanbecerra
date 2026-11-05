@@ -1,4 +1,4 @@
-FROM alpine:último
+FROM alpine:latest
 
 RUN apk add --no-cache netcat-openbsd python3 bind-tools
 
