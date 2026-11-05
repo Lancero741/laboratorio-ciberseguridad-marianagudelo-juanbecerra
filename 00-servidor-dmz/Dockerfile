@@ -1,4 +1,4 @@
-DESDE python:alpine
+FROM python:alpine
 
 DIRECTORIO DE TRABAJO /app
 
