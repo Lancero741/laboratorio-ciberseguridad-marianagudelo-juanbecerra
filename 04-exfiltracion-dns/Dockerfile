@@ -1,4 +1,4 @@
-DE alpine:último
+FROM alpine:último
 
 RUN apk add --no-cache bind-tools curl python3
 
