@@ -1,4 +1,4 @@
-FROM python:alpine
+FROM python:alpine:latest
 
 RUN pip install --no-cache-dir flask requests
 
