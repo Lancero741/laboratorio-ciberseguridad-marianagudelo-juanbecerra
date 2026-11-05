@@ -1,4 +1,4 @@
-FROM python:alpine
+FROM python:alpine:latest
 
 DIRECTORIO DE TRABAJO /app
 
