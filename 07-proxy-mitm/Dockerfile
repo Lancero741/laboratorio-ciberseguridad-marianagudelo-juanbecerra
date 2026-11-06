@@ -1,11 +1,11 @@
-FROM python:alpine:latest
+FROM python:alpine
 
 RUN pip install --no-cache-dir flask requests
 
-DIRECTORIO DE TRABAJO /app
+WORKDIR /app
 
-COPIA app.py /app/app.py
+COPY app.py /app/app.py
 
 EXPOSE 8080
 
-CMD [ "python" , "app.py" ]
+CMD ["python", "app.py"]
