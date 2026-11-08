@@ -1,6 +1,6 @@
 #!/bin/sh
 
-HOST="[https://zero0-servidor-dmz-marianagudelo.onrender.com/](https://zero0-servidor-dmz-marianagudelo.onrender.com/)"
+HOST="zero0-servidor-dmz-marianagudelo.onrender.com"
 
 echo "=== INICIANDO ESCANEO DE PUERTOS Y RECONOCIMIENTO EN LA DMZ ==="
 echo "Analizando puertos comunes sobre $HOST..."
