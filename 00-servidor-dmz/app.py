@@ -28,7 +28,7 @@ class CustomHandler(SimpleHTTPRequestHandler):
                 <h1>🛡️ Servidor Objetivo DMZ</h1>
                 <p>Estado del servicio: <span class="status">ONLINE / ACTIVO</span></p>
                 <hr>
-                <p><strong>Laboratorio de Ciberseguridad:</strong> {estudiante}</p>
+                <p>Servidor DMZ Activo <br> Laboratorio de Mariana Agudelo y Juan Francisco Becerra</p>
                 <p>Este nodo actúa como objetivo central para las pruebas de tráfico y análisis de logs.</p>
             </div>
         </body>
