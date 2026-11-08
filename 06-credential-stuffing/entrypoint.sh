@@ -1,6 +1,6 @@
 #!/bin/sh
 
-TARGET="[https://zero0-servidor-dmz-marianagudelo.onrender.com/](https://zero0-servidor-dmz-marianagudelo.onrender.com/)"
+TARGET="https://zero0-servidor-dmz-marianagudelo.onrender.com"
 USUARIOS="admin root user docente gestor"
 
 echo "=== INICIANDO ATAQUE DE CREDENTIAL STUFFING / BRUTE FORCE ==="
